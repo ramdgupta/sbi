@@ -107,6 +107,19 @@ h2{
 .hideDesktop{
     display: none;
 }
+.banner{
+    position: relative;
+}
+.banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    background: url(./img/thearc-wap.png) no-repeat;
+    width: 64px;
+    height: 64px;
+}
 @media screen and (max-width:376px){
     .hideMobile{
         display: none;
@@ -114,6 +127,7 @@ h2{
     .hideDesktop{
         display: block;
     }
+    
 }
 @media screen and (min-width:768px){
     .container {
@@ -132,7 +146,11 @@ h2{
         grid-template-columns: minmax(340px, 540px) minmax(340px, 540px);
         grid-template-rows: minmax(259px, 440px);
     }
-    
+    .banner:before {
+        background: url(./img/thearc-web.png) no-repeat;
+        height: 153px;
+        width: 153px;    
+    }
 }
 @media screen and (min-width:992px){
     .container {
