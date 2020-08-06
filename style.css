@@ -52,6 +52,9 @@ body{
     color: var(--black-light);
     background:var(--gray);
 }
+.marginBottom50{
+    margin-bottom: 50px;
+}
 .container {
     width: 100%;
     margin: 0 auto 45px;
@@ -86,7 +89,7 @@ h2{
     align-items: center;
     text-align: center;
     color:var(--white);
-    margin-top: 50px;
+    
 }
 
 .button {
