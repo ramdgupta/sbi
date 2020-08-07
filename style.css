@@ -5,6 +5,7 @@
     --black-light:#737B7D;
     --white:#fff;
     --white-light:rgba(255, 255, 255, 0.8);
+    --blue-light:#17AEED;
 }
 body, ul,li{
     margin: 0;
@@ -25,7 +26,8 @@ body{
 .grid{
     display: grid;
     grid-template-columns:100%;
-    grid-template-rows: 72px auto auto auto 55px;
+   /*  grid-template-rows: 72px auto auto auto 55px; */
+   grid-template-rows: auto auto auto 55px;
 }
 .grid > div{
     display: grid;
@@ -47,6 +49,7 @@ body{
 }
 .leadForm .container {
     padding: 32px 20px 0;
+    max-width: 906px;
 }
 .grayBg{
     color: var(--black-light);
@@ -57,7 +60,7 @@ body{
 }
 .container {
     width: 100%;
-    margin: 0 auto 45px;
+    margin: 0 auto 25px;
 }
 .content .grid {
     display: grid;
@@ -95,7 +98,7 @@ h2{
 .button {
     width: auto;
     border-radius: 20px;
-    background: var(--blue);
+    background: var(--blue-light);
     place-items: center;
     color: #fff;
     max-width: 126px;
@@ -120,6 +123,30 @@ h2{
     width: 64px;
     height: 64px;
 }
+label {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 16px;
+    color: #1E1F1F;
+}
+
+input[type="text"] {
+    height: 56px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.57);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+.field {
+    margin-bottom: 34px;
+}
+
+.field input:focus {
+    outline: 1px solid #c3c3c3fa;
+}
+
 @media screen and (max-width:376px){
     .hideMobile{
         display: none;
@@ -127,7 +154,9 @@ h2{
     .hideDesktop{
         display: block;
     }
-    
+    .leadForm iframe{
+        max-height: 230px;
+    }
 }
 @media screen and (min-width:768px){
     .container {
@@ -140,7 +169,7 @@ h2{
         padding-left: 74px;
     }
     .leadForm iframe {
-        height: 630px;
+        height: 670px;
     }
     .content .grid{
         grid-template-columns: minmax(340px, 540px) minmax(340px, 540px);
